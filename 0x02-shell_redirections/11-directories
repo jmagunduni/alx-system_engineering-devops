@@ -1,2 +1,2 @@
 #!/bin/bash
-count=$(find . -type d | wc -l)
+find . -mindepth 1 -maxdepth 1 -type d -exec sh -c "ls -d {}/*" \; | wc -l
